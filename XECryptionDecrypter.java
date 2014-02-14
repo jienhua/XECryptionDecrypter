@@ -1,7 +1,8 @@
 /***************************************
- * Name: XECryptionDecrypter
- *
- *
+ * Name   : XECryptionDecrypter
+ * Author : Ji-En Hua
+ * Date   : February, 14 2014
+ * Version: 1
  ***************************************/
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -10,6 +11,7 @@ import java.lang.Object;
 
 public class XECryptionDecrypter
 {
+    
     public static void main(String[] args)
     {
         ArrayList list = new ArrayList();
@@ -37,7 +39,6 @@ public class XECryptionDecrypter
         		count++;
         		if(count == 3)
         		{
-                    System.out.println(holder);
         			list2.add((Integer)holder);
         			holder=0;
         			count=0;
@@ -84,7 +85,6 @@ public class XECryptionDecrypter
             
             count = 0;
         }
-        System.out.println("thsi is most number : " + answer);
         
         return answer;
     }
@@ -95,14 +95,13 @@ public class XECryptionDecrypter
         int eValue = 0;
         int holder = 0;
         eValue = b - e +1;
-        System.out.println("this is first element: " + a.get(0));
-        System.out.println("this is e, and new Evalue: " + e+", " + eValue);
-        System.out.println("first element - evalue: " + ((Integer)a.get(0) - eValue));
         
         for(int i = 0; i < a.size(); i++)
         {
             holder = (Integer)a.get(i) - eValue;
             System.out.print((char)holder);
         }
+        
+        System.out.println("");
     }
 }
